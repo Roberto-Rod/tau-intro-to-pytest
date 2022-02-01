@@ -9,6 +9,7 @@ import pytest
 # Simple test function
 #----------------------------------------------------------
 
+@pytest.mark.math
 def test_one_plus_one():
     assert 1 + 1 == 2
 
@@ -16,6 +17,7 @@ def test_one_plus_one():
 # A function to show assertion introspection
 #----------------------------------------------------------
 
+@pytest.mark.math
 def test_one_plus_two():
     a = 1
     b = 2
@@ -26,6 +28,7 @@ def test_one_plus_two():
 # A function that verifies an exception
 #----------------------------------------------------------
 
+@pytest.mark.math
 def test_divide_by_zero():
     with pytest.raises(ZeroDivisionError) as e:
         num = 1 / 0 
@@ -48,6 +51,7 @@ products = [
     (2.5, 6.7, 16.75),          # floats
 ]
 
+@pytest.mark.math
 @pytest.mark.parametrize('a, b, product', products)         # aspect Orientated Programming using a decorator function
 def test_multiplication(a, b, product):                     # This function is called once per tuple on the products list
     assert a* b == product
