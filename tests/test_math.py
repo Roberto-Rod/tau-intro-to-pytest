@@ -48,12 +48,14 @@ products = [
     (2.5, 6.7, 16.75),          # floats
 ]
 
-@pytest.mark.parametrize('a, b, product', products)
-def test_multiplication(a, b, product):
+@pytest.mark.parametrize('a, b, product', products)         # aspect Orientated Programming using a decorator function
+def test_multiplication(a, b, product):                     # This function is called once per tuple on the products list
     assert a* b == product
 
 
-
+#----------------------------------------------------------
+# Classes
+#----------------------------------------------------------
 
 
 
